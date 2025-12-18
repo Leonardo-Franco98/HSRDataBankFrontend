@@ -1,33 +1,29 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { Routes, Route, Navigate } from 'react-router-dom'
+import Characters from './pages/characters/Characters'
+import CharacterDetails from './pages/characterDetails/CharacterDetails'
+import Lightcones from './pages/lightcones/Lightcones'
+import LightconeDetails from './pages/lightconeDetails/LightconeDetails'
+import Relics from './pages/relics/Relics'
+import RelicDetails from './pages/relicDetails/RelicDetails'
+import PlanarOrnaments from './pages/planarOrnaments/PlanarOrnaments'
+import PlanarOrnamentDetails from './pages/planarOrnamentDetails/PlanarOrnamentDetails'
+import CharactersStatComparison from './pages/charactersStatsComparison/CharactersStatsComparison'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Routes>
+        <Route path="/" element={<Navigate to={'/characters'} replace />} />
+        <Route path="/characters" element={<Characters />}></Route>
+        <Route path="/characters/:id" element={<CharacterDetails />}></Route>
+        <Route path="/lightcones" element={<Lightcones />}></Route>
+        <Route path="/lightcones/:id" element={<LightconeDetails />}></Route>
+        <Route path="/relics" element={<Relics />}></Route>
+        <Route path="/relics/:id" element={<RelicDetails />}></Route>
+        <Route path="/planarOrnaments" element={<PlanarOrnaments />}></Route>
+        <Route path="/planarOrnaments/:id" element={<PlanarOrnamentDetails />}></Route>
+        <Route path="/charactersStatsComparison" element={<CharactersStatComparison />}></Route>
+      </Routes>
     </>
   )
 }
