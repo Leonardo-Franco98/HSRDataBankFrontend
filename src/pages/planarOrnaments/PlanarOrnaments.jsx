@@ -17,9 +17,9 @@ const PlanarOrnaments = () => {
   }, [])
 
   return (
-    <>
-      <p>planar ornaments</p>
-      <div className="grid grid-cols-4">
+    <div className="px-30 py-8">
+      <p className="text-4xl mb-6">Planar Ornament Sets</p>
+      <div className="grid grid-cols-3 gap-4">
         {
           planarOrnaments.map(po => {
             return <Link to={`/planarOrnaments/${po.id}`} key={po.id}>
@@ -28,7 +28,7 @@ const PlanarOrnaments = () => {
           })
         }
       </div>
-    </>
+    </div>
   )
 }
 

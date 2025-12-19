@@ -12,7 +12,7 @@ import CharactersStatComparison from './pages/charactersStatsComparison/Characte
 
 function App() {
   return (
-    <div className='flex'>
+    <div className='flex bg-slate-800'>
       <Sidebar />
       <div className='pl-80'>
         <Routes>
