@@ -25,17 +25,21 @@ const Sidebar = () => {
     {
       name: 'Characters Stats',
       path: '/charactersStatComparison',
-      icon: 'table'
+      icon: 'characterStats'
     }
   ]
 
   return (
-    <div>
-      <h3>HSR Data Bank</h3>
+    <div className='min-w-80 max-w-80 h-full bg-stone-950 p-8 fixed'>
+      <div className='justify-items-center'>
+        <img src="/src/assets/dataBank.png" className='h-40 w-40 mb-4' />
+        <h3 className='text-white text-3xl'>HSR Data Bank</h3>
+      </div>
+      <hr className='my-12 text-white mx-4' />
       <div>
         {
           tabs.map(t => {
-            return <SidebarTab key={t.path} tab={t} />
+            return <SidebarTab key={t.path} name={t.name} path={t.path} icon={t.icon} />
           })
         }
       </div>

@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react"
-import { useParams } from "react-router-dom"
+import { useState, useEffect } from 'react'
+import { useParams } from 'react-router-dom'
 import relicsService from '../../services/relics'
 
 const RelicDetails = () => {
