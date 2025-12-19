@@ -1,10 +1,12 @@
-import { useState, useEffect } from "react"
-import { useParams } from "react-router-dom"
+import { useState, useEffect } from 'react'
+import { useParams } from 'react-router-dom'
 import planarOrnamentsService from '../../services/planarOrnaments'
 
 const CharacterDetails = () => {
   const [planarOrnament, setPlanarOrnament] = useState(null)
   const id = useParams().id
+  const pieces = ['sphere', 'rope']
+  const [selected, setSelected] = useState('sphere')
 
   useEffect(() => {
     const fetchPlanarOrnament = async () => {
@@ -16,11 +18,49 @@ const CharacterDetails = () => {
     fetchPlanarOrnament()
   }, [id])
 
+  const handlePlanarOrnamentClick = (type) => {
+    setSelected(type)
+  }
+
   return (
-    <>
-      <p>planar ornament details</p>
-      {planarOrnament && <p>{planarOrnament.name}</p>}
-    </>
+    <div className="px-30 py-16">
+      {
+        planarOrnament &&
+        <>
+          <div className='flex gap-40 mb-20'>
+            <img className="w-60 h-60" src={`${import.meta.env.VITE_API_URL}/images/planarOrnaments/${planarOrnament.name}`} alt="" />
+            <div className='text-white pt-6'>
+              <p className='text-3xl text-sky-400 font-semibold mb-4'>{planarOrnament.name}</p>
+              <p className='text-lg'>2 pieces: {planarOrnament.effect}</p>
+            </div>
+          </div>
+          <div className='flex items-center justify-evenly relative mb-20 h-50'>
+            {
+              pieces.map(p => {
+                return <div className='z-10 bg-slate-800 px-4'>
+                  <div
+                    className={(p === selected ? 'bg-slate-400 w-50 h-50 ' : 'w-40 h-40 ') + 'border-solid border-white border-4 rounded-full p-4 transition-[all] duration-300 delay-50 hover:w-50 hover:h-50'}
+                    onClick={() => handlePlanarOrnamentClick(p)}
+                  >
+                    <img
+                      className='w-full h-full'
+                      src={`${import.meta.env.VITE_API_URL}/images/planarOrnaments/${planarOrnament[p].name}`} alt=""
+                    />
+                  </div>
+                </div>
+              })
+            }
+            <hr className='absolute text-white w-full border-solid border-2' />
+          </div>
+          <div className='text-white whitespace-pre-wrap'>
+            <p className='text-3xl text-sky-300 font-semibold mb-6'>{planarOrnament[selected].name}</p>
+            <p className='text-xl mb-12'>{planarOrnament[selected].description}</p>
+            <p className='text-2xl text-sky-200 font-semibold mb-6'>Story</p>
+            <p className='text-lg'>{planarOrnament[selected].story}</p>
+          </div>
+        </>
+      }
+    </div>
   )
 }
 
