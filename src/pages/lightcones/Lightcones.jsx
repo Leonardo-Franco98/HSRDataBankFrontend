@@ -50,7 +50,7 @@ const Lightcones = () => {
         search={search} paths={paths} rarities={rarities}
         setSearch={setSearch} setPaths={setPaths} setRarities={setRarities}
       />
-      <div className="grid grid-cols-4">
+      <div className="grid grid-cols-4 gap-12">
         {
           filteredLightcones.map(l => {
             return <Link to={`/lightcones/${l.id}`} key={l.id}>

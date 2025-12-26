@@ -1,1 +1,7 @@
 @import "tailwindcss";
+
+@theme {
+  --color-fourstars: #c199fd;
+  --color-fivestars: #ffc870;
+  --color-threestars: #73b0f4;
+}
