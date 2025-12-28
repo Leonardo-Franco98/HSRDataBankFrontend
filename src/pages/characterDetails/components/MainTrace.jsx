@@ -36,8 +36,6 @@ const MainTrace = ({ trace, characterName, traceType, number, maxLevel }) => {
     )
   }
 
-  replaceScalings()
-
   return (
     <div className="mb-12">
       <div className="flex gap-4 items-center mb-5">
