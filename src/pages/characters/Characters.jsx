@@ -63,7 +63,7 @@ const Characters = () => {
         search={search} elements={elements} paths={paths} rarities={rarities}
         setSearch={setSearch} setElements={setElements} setPaths={setPaths} setRarities={setRarities}
       />
-      <div className="grid grid-cols-4">
+      <div className="grid grid-cols-4 gap-12">
         {
           filteredCharacters.map(c => {
             return <Link to={`/characters/${c.id}`} key={c.id}>
