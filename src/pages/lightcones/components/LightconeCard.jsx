@@ -32,7 +32,7 @@ const LightconeCard = ({ lightcone }) => {
       <div className="flip-card-inner relative w-full h-full transform-3d group-hover:rotate-y-180 duration-800">
         <div className="absolute backface-hidden w-full h-full">
           <div className={`bg-linear-to-br from-slate-700 ${rarityColor} p-4 rounded-t-lg`}>
-            <img src={`${import.meta.env.VITE_API_URL}/images/lightcones/${lightcone.name} - Preview`} className='h-60 mx-auto' />
+            <img src={`${import.meta.env.VITE_API_URL}/images/lightcones/${lightcone.name.replace(':', ' +').replace('?', '~')} - Preview`} className='h-60 mx-auto' />
           </div>
           <div className="w-full h-auto flex flex-col justify-between bg-slate-900 p-8 rounded-b-lg">
             <p className="text-white text-2xl font-semibold mb-4 h-16">{lightcone.name}</p>

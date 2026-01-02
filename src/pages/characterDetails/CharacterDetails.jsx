@@ -26,7 +26,10 @@ const CharacterDetails = () => {
       {
         character &&
         <>
-          <InfoSection name={character.name} />
+          <InfoSection
+            name={character.name} element={character.element} path={character.path}
+            rarity={character.rarity} stats={character.stats} story={character.story} voice={character.voice}
+          />
           <MainTracesSection mainTraces={character.traces.core} characterName={character.name} />
           <NotableTracesSection notableTraces={character.traces.large} characterName={character.name} />
           <StatTraceSection statTraces={character.traces.small} />

@@ -25,7 +25,7 @@ const LightconeDetails = () => {
         lightcone &&
         <div className='flex gap-30'>
           <div className='min-w-2/5'>
-            <img src={`${import.meta.env.VITE_API_URL}/images/lightcones/${lightcone.name}`} className='w-full' />
+            <img src={`${import.meta.env.VITE_API_URL}/images/lightcones/${lightcone.name.replace(':', ' +').replace('?', '~')}`} className='w-full' />
           </div>
           <div>
             <DetailsSection name={lightcone.name} path={lightcone.path} rarity={lightcone.rarity} stats={lightcone.stats} />
