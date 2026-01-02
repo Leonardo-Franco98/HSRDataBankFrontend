@@ -4,6 +4,7 @@ const NotableTracesSection = ({ notableTraces, characterName }) => {
   return (
     <div className='mb-16'>
       <p className='text-4xl text-sky-300 font-semibold mb-8'>Notable Traces</p>
+      <div className='mb-8 bg-linear-to-r from-sky-300 to-slate-800 w-1/2 h-px'></div>
       <div className='flex grid grid-cols-3'>
         {
           notableTraces.map((nt, index) => {

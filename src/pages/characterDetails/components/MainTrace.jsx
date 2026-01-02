@@ -7,10 +7,6 @@ const MainTrace = ({ trace, characterName, traceType, number, maxLevel }) => {
   let src = `${import.meta.env.VITE_API_URL}/images/characters/${characterName} - ${traceType}`
   if (number) src += ` ${number}`
 
-  const handleLevelChange = (newLevel) => {
-    setLevel(newLevel)
-  }
-
   const replaceScalings = () => {
     let effectParts = trace.effect.split('#')
 
@@ -61,7 +57,7 @@ const MainTrace = ({ trace, characterName, traceType, number, maxLevel }) => {
           traceType !== 'Technique' &&
           <div>
             <p className="text-white text-lg font-semibold mb-1">Lvl. {level} / {maxLevel}</p>
-            <input type="range" min={1} max={maxLevel} className="w-full" value={level} onChange={(e) => handleLevelChange(e.target.value)} />
+            <input type="range" min={1} max={maxLevel} className="w-full" value={level} onChange={(e) => setLevel(e.target.value)} />
             <div className='flex justify-between mb-2'>
               <p className="text-white text-lg font-semibold">1</p>
               <p className="text-white text-lg font-semibold">{maxLevel}</p>

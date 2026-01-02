@@ -2,8 +2,9 @@ import StatTrace from './StatTrace'
 
 const StatTraceSection = ({ statTraces }) => {
   return (
-    <div className='mb-16'>
+    <div className='mb-24'>
       <p className='text-4xl text-sky-300 font-semibold mb-8'>Stat Traces</p>
+      <div className='mb-16 bg-linear-to-r from-sky-300 to-slate-800 w-1/2 h-px'></div>
       <div className='flex justify-center gap-32'>
         {
           statTraces.map(st => {
