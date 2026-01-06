@@ -28,7 +28,7 @@ const Sidebar = () => {
     },
     {
       name: 'Characters Stats',
-      path: '/charactersStatComparison',
+      path: '/charactersStatsComparison',
       icon: 'characterStats'
     }
   ]

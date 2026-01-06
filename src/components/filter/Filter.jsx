@@ -21,7 +21,7 @@ const Filter = (props) => {
   }
 
   return (
-    <div className="w-fit min-w-5xl m-auto bg-black p-4 rounded-xl mb-16">
+    <div className="w-fit min-w-5xl m-auto bg-black p-4 rounded-xl mb-8">
       <div className={(props.elements || props.paths || props.rarities ? 'mb-4 ' : '') + 'flex gap-4 items-center'}>
         <input
           type="text"

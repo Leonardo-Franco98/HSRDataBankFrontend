@@ -1,36 +1,14 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import charactersService from '../../services/characters'
+import K from '../../utils/consts'
 import Filter from '../../components/filter/Filter'
 import CharacterCard from './components/CharacterCard'
 
 const Characters = () => {
   const [characters, setCharacters] = useState([])
-  const [elements, setElements] = useState(
-    [
-      { element: 'Lightning', selected: false },
-      { element: 'Wind', selected: false },
-      { element: 'Fire', selected: false },
-      { element: 'Ice', selected: false },
-      { element: 'Physical', selected: false },
-      { element: 'Imaginary', selected: false },
-      { element: 'Quantum', selected: false }
-    ]
-  )
-
-  const [paths, setPaths] = useState(
-    [
-      { path: 'Destruction', selected: false },
-      { path: 'Erudition', selected: false },
-      { path: 'The Hunt', selected: false },
-      { path: 'Abundance', selected: false },
-      { path: 'Preservation', selected: false },
-      { path: 'Nihility', selected: false },
-      { path: 'Harmony', selected: false },
-      { path: 'Remembrance', selected: false },
-      { path: 'Elation', selected: false }
-    ]
-  )
+  const [elements, setElements] = useState(K.elements)
+  const [paths, setPaths] = useState(K.paths)
   const [rarities, setRarities] = useState([{ rarity: 5, selected: false }, { rarity: 4, selected: false }])
   const [search, setSearch] = useState('')
 
@@ -63,7 +41,7 @@ const Characters = () => {
         search={search} elements={elements} paths={paths} rarities={rarities}
         setSearch={setSearch} setElements={setElements} setPaths={setPaths} setRarities={setRarities}
       />
-      <div className="grid grid-cols-4 gap-12">
+      <div className="grid grid-cols-4 gap-12 mt-16">
         {
           filteredCharacters.map(c => {
             return <Link to={`/characters/${c.id}`} key={c.id}>

@@ -31,7 +31,7 @@ const Relics = () => {
   return (
     <div className="px-30 py-12">
       <Filter search={search} setSearch={setSearch} />
-      <div className="grid grid-cols-3 gap-4">
+      <div className="grid grid-cols-3 gap-4 mt-16">
         {
           filteredRelics.map(r => {
             return <Link to={`/relics/${r.id}`} key={r.id}>
