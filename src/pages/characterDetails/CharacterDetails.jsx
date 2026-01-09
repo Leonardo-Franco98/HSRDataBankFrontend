@@ -6,6 +6,7 @@ import MainTracesSection from './components/MainTracesSection'
 import NotableTracesSection from './components/NotableTracesSection'
 import StatTraceSection from './components/StatTraceSection'
 import EidolonSection from './components/EidolonSection'
+import StorySection from './components/StorySection'
 
 const CharacterDetails = () => {
   const [character, setCharacter] = useState(null)
@@ -28,12 +29,13 @@ const CharacterDetails = () => {
         <>
           <InfoSection
             name={character.name} element={character.element} path={character.path}
-            rarity={character.rarity} stats={character.stats} story={character.story} voice={character.voice}
+            rarity={character.rarity} stats={character.stats} intro={character.intro} voice={character.voice}
           />
           <MainTracesSection mainTraces={character.traces.core} characterName={character.name} />
           <NotableTracesSection notableTraces={character.traces.large} characterName={character.name} />
           <StatTraceSection statTraces={character.traces.small} />
           <EidolonSection eidolons={character.eidolons} characterName={character.name} />
+          <StorySection story={character.story} />
         </>
       }
     </div>

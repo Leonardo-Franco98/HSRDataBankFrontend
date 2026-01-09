@@ -1,4 +1,4 @@
-const InfoSection = ({ name, path, element, rarity, stats, story, voice }) => {
+const InfoSection = ({ name, path, element, rarity, stats, intro, voice }) => {
   return (
     <div className="flex mb-30 gap-20">
       <div className="min-w-3/5">
@@ -33,7 +33,7 @@ const InfoSection = ({ name, path, element, rarity, stats, story, voice }) => {
             <p className='text-white text-xl'>{stats.def}</p>
           </div>
         </div>
-        <p className="text-white text-xl mb-12">{story}</p>
+        <p className="text-white text-xl mb-12">{intro}</p>
         <div>
           <p className="text-white text-2xl font-semibold mb-4 w-fit mx-auto">Voice</p>
           <div className="flex justify-evenly">
