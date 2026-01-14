@@ -48,7 +48,7 @@ const CharactersStatsComparison = () => {
   }
 
   return (
-    <div className="px-60 py-16">
+    <div className="3xl:px-60 xl:px-30 lg:px-20 px-4 py-16">
       {
         characters &&
         <>

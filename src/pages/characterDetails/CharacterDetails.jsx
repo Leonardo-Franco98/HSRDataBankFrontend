@@ -23,7 +23,7 @@ const CharacterDetails = () => {
   }, [id])
 
   return (
-    <div className="px-30 py-8">
+    <div className="3xl:px-30 xl:px-20 px-10 py-8">
       {
         character &&
         <>

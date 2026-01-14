@@ -28,7 +28,7 @@ const LightconeCard = ({ lightcone }) => {
   }
 
   return (
-    <div className="flip-card h-125 perpective-distant group">
+    <div className="flip-card h-125 perpective-distant group max-w-90">
       <div className="flip-card-inner relative w-full h-full transform-3d group-hover:rotate-y-180 duration-800">
         <div className="absolute backface-hidden w-full h-full">
           <div className={`bg-linear-to-br from-slate-700 ${rarityColor} p-4 rounded-t-lg`}>
@@ -45,7 +45,7 @@ const LightconeCard = ({ lightcone }) => {
             </div>
           </div>
         </div>
-        <div className="absolute rotate-y-180 bg-slate-900 backface-hidden w-full h-full px-8 py-6 rounded-lg">
+        <div className="absolute rotate-y-180 bg-slate-900 backface-hidden w-full h-full px-8 py-6 rounded-lg overflow-y-scroll no-scrollbar">
           <p className="text-sky-300 text-2xl font-semibold mb-4">{lightcone.name}</p>
           <p className="text-white text-md">{replaceScalings()}</p>
         </div>

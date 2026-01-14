@@ -1,6 +1,6 @@
 const StatTrace = ({ stat, value }) => {
   return (
-    <div className="flex items-center gap-4">
+    <div className="flex items-center gap-4 vl:mb-0 mb-6">
       <img
         className="w-16 h-16 border-4 border-solid border-white rounded-full"
         src={`${import.meta.env.VITE_API_URL}/images/misc/${stat}`}

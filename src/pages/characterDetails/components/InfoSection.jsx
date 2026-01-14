@@ -1,15 +1,15 @@
 const InfoSection = ({ name, path, element, rarity, stats, intro, voice }) => {
   return (
-    <div className="flex mb-30 gap-20">
-      <div className="min-w-3/5">
+    <div className="2xl:flex mb-30 2-5xl:gap-20 gap-10">
+      <div className="min-w-3/5 mb-20">
         <img src={`${import.meta.env.VITE_API_URL}/images/characters/${name}`} />
       </div>
       <div>
         <p className='text-white font-semibold text-5xl mb-12'>{name}</p>
         <p className='text-sky-300 font-semibold text-3xl mb-4'>Details</p>
         <div className='mb-8 bg-linear-to-r from-sky-300 to-slate-800 w-1/2 h-px'> </div>
-        <div className="flex gap-20 mb-8">
-          <div className='flex gap-4 items-center'>
+        <div className="sm:flex gap-20 mb-8">
+          <div className='flex sm:mb-0 mb-4 gap-4 items-center'>
             <img src={`${import.meta.env.VITE_API_URL}/images/misc/${path}`} className='h-16' />
             <p className='text-white text-2xl'>{path}</p>
           </div>

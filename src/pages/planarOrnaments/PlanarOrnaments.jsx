@@ -29,9 +29,9 @@ const PlanarOrnaments = () => {
   }, [])
 
   return (
-    <div className="px-30 py-12">
+    <div className="3xl:px-30 xl:px-20 px-10 py-12">
       <Filter search={search} setSearch={setSearch} />
-      <div className="grid grid-cols-3 gap-4 mt-16">
+      <div className="grid 2-5xl:grid-cols-3 vl:grid-cols-2 lg:grid-cols-1 md:grid-cols-2 gap-4 mt-16">
         {
           filteredPlanarOrnaments.map(po => {
             return <Link to={`/planarOrnaments/${po.id}`} key={po.id}>

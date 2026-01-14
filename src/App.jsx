@@ -14,7 +14,7 @@ function App() {
   return (
     <div className='flex bg-slate-800'>
       <Sidebar />
-      <div className='pl-80 w-full min-h-screen'>
+      <div className='lg:pl-80 w-full min-h-screen'>
         <Routes>
           <Route path="/" element={<Navigate to={'/characters'} replace />} />
           <Route path="/characters" element={<Characters />}></Route>

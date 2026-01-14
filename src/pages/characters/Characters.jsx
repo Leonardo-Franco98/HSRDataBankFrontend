@@ -36,12 +36,12 @@ const Characters = () => {
   }, [])
 
   return (
-    <div className="px-30 py-12">
+    <div className="3xl:px-30 xl:px-20 px-10 py-12">
       <Filter
         search={search} elements={elements} paths={paths} rarities={rarities}
         setSearch={setSearch} setElements={setElements} setPaths={setPaths} setRarities={setRarities}
       />
-      <div className="grid grid-cols-4 gap-12 mt-16">
+      <div className="grid 3xl:grid-cols-4 2xl:grid-cols-3 sm:grid-cols-2 gap-12 mt-16">
         {
           filteredCharacters.map(c => {
             return <Link to={`/characters/${c.id}`} key={c.id}>

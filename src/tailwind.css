@@ -4,4 +4,13 @@
   --color-five-stars: #ffc870;
   --color-four-stars: #c199fd;
   --color-three-stars: #73b0f4;
+
+  --breakpoint-vl: 74rem;
+  --breakpoint-1-5xl: 88rem;
+  --breakpoint-2-5xl: 106rem;
+  --breakpoint-3xl: 120rem;
+}
+
+@utility no-scrollbar {
+  @apply [scrollbar-width:none] [&::-webkit-scrollbar]:hidden;
 }

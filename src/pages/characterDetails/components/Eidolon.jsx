@@ -2,7 +2,7 @@ const Eidolon = ({ characterName, eidolon, number }) => {
   return (
     <div className="mb-12">
       <img
-        className="h-120 w-120 mx-auto"
+        className="w-full max-w-120 mx-auto"
         src={`${import.meta.env.VITE_API_URL}/images/characters/${characterName} - Eidolon ${number} Image`}
       />
       <div className="flex gap-4 items-center mb-5">

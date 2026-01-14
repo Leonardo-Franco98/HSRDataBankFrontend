@@ -3,7 +3,7 @@ const CharacterCard = ({ character }) => {
   const rarityColor = character.rarity === 5 ? 'to-five-stars' : 'to-four-stars'
 
   return (
-    <div className="relative group overflow-hidden h-126">
+    <div className="relative group overflow-hidden h-126 max-w-94">
       <div className={`bg-linear-to-br from-slate-700 ${rarityColor} rounded-t-lg h-70 
         group-hover:h-126 group-hover:rounded-b-lg duration-1000 transition-all`}>
         <img

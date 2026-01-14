@@ -23,23 +23,28 @@ const CharacterDetails = () => {
   }
 
   return (
-    <div className="px-30 py-16">
+    <div className="3xl:px-30 xl:px-20 px-10 py-16">
       {
         planarOrnament &&
         <>
-          <div className='flex gap-40 mb-20'>
+          <div className='md:flex 1-5xl:gap-40 vl:gap-20 gap-8 md:mb-20 mb-10'>
             <img className="w-60 h-60" src={`${import.meta.env.VITE_API_URL}/images/planarOrnaments/${planarOrnament.name}`} alt="" />
             <div className='text-white pt-6'>
               <p className='text-3xl text-sky-400 font-semibold mb-4'>{planarOrnament.name}</p>
               <p className='text-lg'>2 pieces: {planarOrnament.effect}</p>
             </div>
           </div>
-          <div className='flex items-center justify-evenly relative mb-20 h-50'>
+          <div className='flex items-center justify-evenly relative md:mb-20 mb-10 h-50'>
             {
               pieces.map(p => {
                 return <div className='z-10 bg-slate-800 px-4'>
                   <div
-                    className={(p === selected ? 'bg-slate-400 w-50 h-50 ' : 'w-40 h-40 ') + 'border-solid border-white border-4 rounded-full p-4 transition-[all] duration-300 delay-50 hover:w-50 hover:h-50'}
+                    className={
+                      (p === selected
+                        ? 'bg-slate-400 1-5xl:w-50 md:w-40 w-32 1-5xl:h-50 md:h-40 h-32 '
+                        : '1-5xl:w-40 w-32 1-5xl:h-40 h-32 ')
+                      + 'border-solid border-white border-4 rounded-full p-4 transition-[all] duration-300 delay-50 1-5xl:hover:w-50 1-5xl:hover:h-50 md:hover:w-40 md:hover:h-40 hover:bg-slate-400'
+                    }
                     onClick={() => handlePlanarOrnamentClick(p)}
                   >
                     <img

@@ -34,7 +34,7 @@ const Sidebar = () => {
   ]
 
   return (
-    <div className='min-w-80 max-w-80 h-full bg-stone-950 py-8 fixed'>
+    <div className='md:min-w-80 max-w-80 h-full bg-stone-950 py-8 fixed invisible lg:visible'>
       <div className='justify-items-center px-8'>
         <img src="/src/assets/dataBank.png" className='h-40 w-40 mb-4' />
         <h3 className='text-white text-3xl'>HSR Data Bank</h3>

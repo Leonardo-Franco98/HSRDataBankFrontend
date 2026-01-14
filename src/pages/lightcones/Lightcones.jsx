@@ -34,12 +34,12 @@ const Lightcones = () => {
   }, [])
 
   return (
-    <div className="px-30 py-12">
+    <div className="3xl:px-30 xl:px-20 px-10 py-12">
       <Filter
         search={search} paths={paths} rarities={rarities}
         setSearch={setSearch} setPaths={setPaths} setRarities={setRarities}
       />
-      <div className="grid grid-cols-4 gap-12 mt-16">
+      <div className="grid 2-5xl:grid-cols-4 1-5xl:grid-cols-3 sm:grid-cols-2 gap-12 mt-16">
         {
           filteredLightcones.map(l => {
             return <Link to={`/lightcones/${l.id}`} key={l.id}>
